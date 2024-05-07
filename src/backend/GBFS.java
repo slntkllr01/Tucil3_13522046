@@ -33,7 +33,6 @@ public class GBFS {
         while (!queue.isEmpty()) {
             Node head = queue.poll();
             count++;
-            System.out.println(head.currentWord);
 
             // Jika tujuan ditemukan
             if (head.currentWord.equals(goal)) {
