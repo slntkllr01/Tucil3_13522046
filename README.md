@@ -1,89 +1,67 @@
 # Word Ladder Solver - Tugas Kecil III IF2211 Strategi Algoritma 
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+> by Raffael Boymian Siahaan (13522046)
 
 ## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
 
+- [General Information](#general-information)
+- [File Structures](#file-structures)
+- [Requirement](#requirement)
+- [Setup and Usage](#setup-and-usage)
+- [Authors](#authors)
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+
+Word ladder, also known as Doublets, word-links, change-the-word puzzles, paragrams, laddergrams, or word golf, is a popular word game for all ages. It was invented by Lewis Carroll, a writer and mathematician, in 1877. In this game, players are given two words called the start word and the end word. To win the game, players must find a chain of words that connects the start word to the end word. The start and end words always have the same number of letters. Each adjacent word in the chain can only differ by one letter. The objective of the game is to find the optimal solution, which minimizes the number of words in the chain. Below is an illustration and the rules of the game.
+
+The purpose of this third small assignment is to create a solver for this game, with the hope of finding the most optimal solution to complete the Word Ladder game. The program should be written in Java and can be based on a Command Line Interface (CLI) or include a Graphical User Interface (GUI) as an additional bonus. The program must find solutions to the word ladder game using the Uniform Cost Search (UCS), Greedy Best First Search, and A* algorithms.
 
 
-## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+## File Structures
+```
+*
+│   README.md
+│
+├───bin
+│   │   SearchAlgorithmGUI.class
+│   │   WordGrid.class
+│   │
+│   └───backend
+│           AStar$Node.class
+│           AStar.class
+│           DictLoader.class
+│           GBFS$Node.class
+│           GBFS.class
+│           Heuristic.class
+│           UCS$Node.class
+│           UCS.class
+│           Utility$Result.class
+│           Utility.class
+│
+├───doc
+│       Tucil3_13522046.pdf
+│
+├───src
+│   │   SearchAlgorithmGUI.java
+│   │   WordGrid.java
+│   │
+│   └───backend
+│           AStar.java
+│           dictionary.txt
+│           DictLoader.java
+│           GBFS.java
+│           Heuristic.java
+│           UCS.java
+│           Utility.java
+│
+└───test
+```
 
+## Requirement
+- `Java` 
+- `Swing`
 
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
-
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
-
-
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
-
-
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
-
-
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
-
-
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
-
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License
-This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+## Setup and Usage
+1. Clone this repository using command `git clone https://github.com/slntkllr01/Tucil3_13522046.git`
+2. Change to root directory using command `cd Tucil3_13522046`
+3. Run the program `java -cp bin SearchAlgorithmGUI`
+4. Choose the algorithm and fill the start word, end word, and then press 'Start!'
